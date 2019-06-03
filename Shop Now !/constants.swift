@@ -8,3 +8,5 @@
 
 import Foundation
 let categoryCellID = "categoryCell"
+let productCellID = "productCell"
+let productSegueID = "productSegue"
