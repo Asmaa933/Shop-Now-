@@ -7,6 +7,12 @@
 //
 
 import Foundation
+//cells identifiers
 let categoryCellID = "categoryCell"
 let productCellID = "productCell"
+
+// segue identifiers
 let productSegueID = "productSegue"
+let cartSegueID = "cartSegue"
+let checkOutSegueID = "checkOutSegue"
+let removeSegueID = "removeSegue"

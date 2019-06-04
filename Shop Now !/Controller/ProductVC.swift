@@ -22,8 +22,8 @@ productCollectionView.delegate = self
     func initProduct(category: CategoryModel){
         products = DataService.instance.getProduct(ForCategoryTitle: category.title)
         navigationItem.title = category.title
+    
     }
-
 
 }
 extension ProductVC : UICollectionViewDelegate, UICollectionViewDataSource{
@@ -40,6 +40,21 @@ extension ProductVC : UICollectionViewDelegate, UICollectionViewDataSource{
         return ProductCollectionViewCell()
         }
     }
-    
-    
+ 
+
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        let selectedItem = products[indexPath.row]
+        performSegue(withIdentifier: cartSegueID, sender: selectedItem)
+print (selectedItem.imageName)
+    }
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+       
+        if let cartVC = segue.destination as? CartVC{
+            
+            assert(sender as? productModel != nil )
+            cartVC.getSelectedItem(selected: sender as! productModel)
+        }
+    }
 }
+    
+

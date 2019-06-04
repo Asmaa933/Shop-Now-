@@ -9,7 +9,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Shop Now !-->
+        <!--Category-->
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="CategoriesVC" customModule="Shop_Now__" customModuleProvider="target" sceneMemberID="viewController">
@@ -77,7 +77,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Shop Now !" largeTitleDisplayMode="always" id="Rn7-Ib-QAE"/>
+                    <navigationItem key="navigationItem" title="Category" largeTitleDisplayMode="always" id="Rn7-Ib-QAE"/>
                     <connections>
                         <outlet property="categoryTableView" destination="Bve-K1-eS6" id="sC2-0x-ElL"/>
                         <segue destination="y6g-LA-ggs" kind="show" identifier="productSegue" id="Zpc-tP-q3E"/>
@@ -171,14 +171,14 @@
                     <navigationItem key="navigationItem" title="Title" id="dm4-NQ-MOg"/>
                     <connections>
                         <outlet property="productCollectionView" destination="T7o-i7-7wV" id="Sx7-Mh-s8g"/>
-                        <segue destination="iv2-Dg-Bes" kind="show" identifier="cartSegue" id="LfF-ci-gjk"/>
+                        <segue destination="iv2-Dg-Bes" kind="show" identifier="cartSegue" id="ggF-lg-bSa"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ez0-v1-cY6" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1804" y="132.68365817091455"/>
         </scene>
-        <!--CartVC-->
+        <!--Cart-->
         <scene sceneID="TXS-co-bK4">
             <objects>
                 <viewController id="iv2-Dg-Bes" customClass="CartVC" customModule="Shop_Now__" customModuleProvider="target" sceneMemberID="viewController">
@@ -186,31 +186,31 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="603"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Cart" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="91V-4Z-Jtk">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="CART" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="91V-4Z-Jtk">
                                 <rect key="frame" x="16" y="30" width="343" height="42"/>
                                 <fontDescription key="fontDescription" name="Noteworthy-Bold" family="Noteworthy" pointSize="26"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="55" translatesAutoresizingMaskIntoConstraints="NO" id="QPZ-fD-U10">
-                                <rect key="frame" x="16" y="271" width="343" height="50"/>
+                                <rect key="frame" x="25" y="271" width="325" height="50"/>
                                 <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JLN-fO-4h1">
-                                        <rect key="frame" x="0.0" y="0.0" width="77.5" height="50"/>
+                                    <button opaque="NO" tag="-1" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JLN-fO-4h1">
+                                        <rect key="frame" x="0.0" y="0.0" width="71.5" height="50"/>
                                         <state key="normal" image="minus"/>
                                         <connections>
                                             <action selector="changeQuantityOfItem:" destination="iv2-Dg-Bes" eventType="touchUpInside" id="bAy-vG-fh3"/>
                                         </connections>
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9As-0w-MQX">
-                                        <rect key="frame" x="132.5" y="0.0" width="78" height="50"/>
+                                        <rect key="frame" x="126.5" y="0.0" width="72" height="50"/>
                                         <fontDescription key="fontDescription" name="MarkerFelt-Wide" family="Marker Felt" pointSize="23"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="L98-LO-JiS">
-                                        <rect key="frame" x="265.5" y="0.0" width="77.5" height="50"/>
-                                        <state key="normal" title="Button" image="plus"/>
+                                    <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="L98-LO-JiS">
+                                        <rect key="frame" x="253.5" y="0.0" width="71.5" height="50"/>
+                                        <state key="normal" image="plus"/>
                                         <connections>
                                             <action selector="changeQuantityOfItem:" destination="iv2-Dg-Bes" eventType="touchUpInside" id="0eG-Cc-awZ"/>
                                         </connections>
@@ -220,18 +220,18 @@
                                     <constraint firstAttribute="height" constant="50" id="zAc-Zu-mvQ"/>
                                 </constraints>
                             </stackView>
-                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="200" translatesAutoresizingMaskIntoConstraints="NO" id="nSl-nn-2b1">
-                                <rect key="frame" x="16" y="346" width="343" height="40"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="110" translatesAutoresizingMaskIntoConstraints="NO" id="nSl-nn-2b1">
+                                <rect key="frame" x="25" y="346" width="325" height="40"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Total: " textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lFE-ep-odx">
-                                        <rect key="frame" x="0.0" y="0.0" width="71.5" height="40"/>
-                                        <fontDescription key="fontDescription" name="Noteworthy-Bold" family="Noteworthy" pointSize="30"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="107.5" height="40"/>
+                                        <fontDescription key="fontDescription" name="Noteworthy-Bold" family="Noteworthy" pointSize="26"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="$ 25" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5zL-Kr-aUu">
-                                        <rect key="frame" x="271.5" y="0.0" width="71.5" height="40"/>
-                                        <fontDescription key="fontDescription" name="Noteworthy-Bold" family="Noteworthy" pointSize="30"/>
+                                        <rect key="frame" x="217.5" y="0.0" width="107.5" height="40"/>
+                                        <fontDescription key="fontDescription" name="Noteworthy-Bold" family="Noteworthy" pointSize="26"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
@@ -252,7 +252,7 @@
                                         </state>
                                         <connections>
                                             <action selector="checkoutBtnTapped:" destination="iv2-Dg-Bes" eventType="touchUpInside" id="z5K-Ei-eE2"/>
-                                            <segue destination="jvJ-YD-91B" kind="show" identifier="checkOutSegue" id="dWR-BH-GoN"/>
+                                            <segue destination="jvJ-YD-91B" kind="show" identifier="checkOutSegue" id="mMJ-NV-AMn"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tQv-wc-OdP">
@@ -264,7 +264,7 @@
                                         </state>
                                         <connections>
                                             <action selector="removeBtnTapped:" destination="iv2-Dg-Bes" eventType="touchUpInside" id="wdc-9S-MTA"/>
-                                            <segue destination="jvJ-YD-91B" kind="show" identifier="removeSegue" id="Un6-C0-cns"/>
+                                            <segue destination="jvJ-YD-91B" kind="show" identifier="removeSegue" id="jaC-uE-ZPL"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -314,13 +314,13 @@
                         </subviews>
                         <color key="backgroundColor" red="0.95294117649999999" green="0.95294117649999999" blue="0.95294117649999999" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
-                            <constraint firstItem="e56-bb-3cW" firstAttribute="trailing" secondItem="nSl-nn-2b1" secondAttribute="trailing" constant="16" id="1js-bD-3Rj"/>
+                            <constraint firstItem="e56-bb-3cW" firstAttribute="trailing" secondItem="nSl-nn-2b1" secondAttribute="trailing" constant="25" id="1js-bD-3Rj"/>
                             <constraint firstItem="e56-bb-3cW" firstAttribute="trailing" secondItem="7kk-xo-5ho" secondAttribute="trailing" constant="16" id="3gM-lP-GwX"/>
-                            <constraint firstItem="nSl-nn-2b1" firstAttribute="leading" secondItem="e56-bb-3cW" secondAttribute="leading" constant="16" id="7gp-bn-nq7"/>
-                            <constraint firstAttribute="trailing" secondItem="QPZ-fD-U10" secondAttribute="trailing" constant="16" id="95i-Vk-2rh"/>
+                            <constraint firstItem="nSl-nn-2b1" firstAttribute="leading" secondItem="e56-bb-3cW" secondAttribute="leading" constant="25" id="7gp-bn-nq7"/>
+                            <constraint firstAttribute="trailing" secondItem="QPZ-fD-U10" secondAttribute="trailing" constant="25" id="95i-Vk-2rh"/>
                             <constraint firstItem="7kk-xo-5ho" firstAttribute="leading" secondItem="e56-bb-3cW" secondAttribute="leading" constant="16" id="AyO-0d-con"/>
                             <constraint firstItem="91V-4Z-Jtk" firstAttribute="top" secondItem="9vj-35-npu" secondAttribute="top" constant="30" id="Gwd-0e-1cS"/>
-                            <constraint firstItem="QPZ-fD-U10" firstAttribute="leading" secondItem="e56-bb-3cW" secondAttribute="leading" constant="16" id="J0C-DM-3nX"/>
+                            <constraint firstItem="QPZ-fD-U10" firstAttribute="leading" secondItem="e56-bb-3cW" secondAttribute="leading" constant="25" id="J0C-DM-3nX"/>
                             <constraint firstItem="e56-bb-3cW" firstAttribute="trailing" secondItem="91V-4Z-Jtk" secondAttribute="trailing" constant="16" id="KZn-iX-HcX"/>
                             <constraint firstItem="e56-bb-3cW" firstAttribute="bottom" secondItem="7kk-xo-5ho" secondAttribute="bottom" constant="22" id="Srh-FP-Q7v"/>
                             <constraint firstItem="nSl-nn-2b1" firstAttribute="top" secondItem="QPZ-fD-U10" secondAttribute="bottom" constant="25" id="abU-eZ-XCo"/>
@@ -333,7 +333,9 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="e56-bb-3cW"/>
                     </view>
+                    <navigationItem key="navigationItem" title="Cart" id="Q4h-9h-fbV"/>
                     <connections>
+                        <outlet property="minusBtn" destination="JLN-fO-4h1" id="PiW-j0-9tA"/>
                         <outlet property="priceLabel" destination="5zL-Kr-aUu" id="DZ3-uD-nKN"/>
                         <outlet property="quantityLabel" destination="9As-0w-MQX" id="0a6-tH-9on"/>
                         <outlet property="selectedItemImage" destination="QDU-t3-D6i" id="jU0-e0-IsT"/>
@@ -345,25 +347,22 @@
             </objects>
             <point key="canvasLocation" x="2568.8000000000002" y="132.68365817091455"/>
         </scene>
-        <!--FinishVC-->
+        <!--Title-->
         <scene sceneID="5gy-Kc-sfY">
             <objects>
                 <viewController id="jvJ-YD-91B" customClass="FinishVC" customModule="Shop_Now__" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="Z2Z-xl-Ry3">
+                    <view key="view" autoresizesSubviews="NO" contentMode="scaleToFill" id="Z2Z-xl-Ry3">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="603"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="You have no items in the cart" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WKc-uJ-RgX">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="You have no items in the cart" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WKc-uJ-RgX">
                                 <rect key="frame" x="16" y="70" width="343" height="33"/>
                                 <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="24"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="wir-9J-j2P">
-                                <rect key="frame" x="40" y="153" width="295" height="196"/>
-                            </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2Ns-Ke-ztV">
-                                <rect key="frame" x="16" y="409" width="343" height="45"/>
+                                <rect key="frame" x="16" y="383" width="343" height="71"/>
                                 <color key="backgroundColor" red="0.54283915140000005" green="0.64139658470000005" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <fontDescription key="fontDescription" name="MarkerFelt-Thin" family="Marker Felt" pointSize="30"/>
                                 <state key="normal" title="Continue Shopping">
@@ -373,8 +372,15 @@
                                     <action selector="continueShoppingBtnTapped:" destination="jvJ-YD-91B" eventType="touchUpInside" id="d6s-ke-V9Y"/>
                                 </connections>
                             </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="cart" translatesAutoresizingMaskIntoConstraints="NO" id="wir-9J-j2P">
+                                <rect key="frame" x="40" y="153" width="295" height="170"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="295" id="WH9-Xe-dPq"/>
+                                    <constraint firstAttribute="height" constant="170" id="dON-QA-c71"/>
+                                </constraints>
+                            </imageView>
                         </subviews>
-                        <color key="backgroundColor" red="0.95294117649999999" green="0.95294117649999999" blue="0.95294117649999999" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="WKc-uJ-RgX" firstAttribute="top" secondItem="JJR-p1-Gcf" secondAttribute="top" constant="70" id="2z6-b5-DxV"/>
                             <constraint firstItem="JJR-p1-Gcf" firstAttribute="trailing" secondItem="wir-9J-j2P" secondAttribute="trailing" constant="40" id="30L-JG-sMi"/>
@@ -389,6 +395,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="JJR-p1-Gcf"/>
                     </view>
+                    <navigationItem key="navigationItem" title="Title" id="MPf-32-p0i"/>
                     <connections>
                         <outlet property="finishImage" destination="wir-9J-j2P" id="bBf-fG-CTW"/>
                         <outlet property="messageLabel" destination="WKc-uJ-RgX" id="qQS-PS-s9S"/>
@@ -423,12 +430,13 @@
         </scene>
     </scenes>
     <resources>
+        <image name="cart" width="170" height="170"/>
         <image name="digital" width="341" height="234"/>
         <image name="minus" width="170" height="170"/>
         <image name="plus" width="170" height="170"/>
         <image name="shirt01" width="166" height="166"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="Un6-C0-cns"/>
+        <segue reference="jaC-uE-ZPL"/>
     </inferredMetricsTieBreakers>
 </document>
