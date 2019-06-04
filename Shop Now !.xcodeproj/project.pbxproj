@@ -19,6 +19,8 @@
 		72F7C60122A4C598000466D2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 72F7C5FF22A4C598000466D2 /* LaunchScreen.storyboard */; };
 		72F7C60E22A4D267000466D2 /* CategoryTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72F7C60D22A4D267000466D2 /* CategoryTableViewCell.swift */; };
 		72F7C61022A4D2C3000466D2 /* constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72F7C60F22A4D2C3000466D2 /* constants.swift */; };
+		72FACB8122A63DF1006F6359 /* CartVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72FACB8022A63DF1006F6359 /* CartVC.swift */; };
+		72FACB8322A63E34006F6359 /* FinishVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72FACB8222A63E34006F6359 /* FinishVC.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,6 +38,8 @@
 		72F7C60222A4C598000466D2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		72F7C60D22A4D267000466D2 /* CategoryTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryTableViewCell.swift; sourceTree = "<group>"; };
 		72F7C60F22A4D2C3000466D2 /* constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = constants.swift; sourceTree = "<group>"; };
+		72FACB8022A63DF1006F6359 /* CartVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartVC.swift; sourceTree = "<group>"; };
+		72FACB8222A63E34006F6359 /* FinishVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FinishVC.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -113,6 +117,8 @@
 			children = (
 				72F7C5F822A4C594000466D2 /* CategoriesVC.swift */,
 				7263EF0622A4FEE800D34FC7 /* ProductVC.swift */,
+				72FACB8022A63DF1006F6359 /* CartVC.swift */,
+				72FACB8222A63E34006F6359 /* FinishVC.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -196,6 +202,8 @@
 				7263EF0722A4FEE800D34FC7 /* ProductVC.swift in Sources */,
 				7263EF0122A4DE7300D34FC7 /* DataService.swift in Sources */,
 				7263EEFE22A4DBAD00D34FC7 /* CategoryModel.swift in Sources */,
+				72FACB8322A63E34006F6359 /* FinishVC.swift in Sources */,
+				72FACB8122A63DF1006F6359 /* CartVC.swift in Sources */,
 				72F7C60E22A4D267000466D2 /* CategoryTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
