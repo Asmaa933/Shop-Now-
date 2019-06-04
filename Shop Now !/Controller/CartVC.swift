@@ -37,21 +37,18 @@ class CartVC: UIViewController {
     }
 
     @IBAction func changeQuantityOfItem(_ sender: UIButton) {
+        quantity += sender.tag
         print(quantity)
         if quantity  < 1 {
             quantity = 1
         }
         if quantity == 1 {
              minusBtn.isEnabled = false
-            quantity += sender.tag
-            quantityLabel.text = "\(quantity)"
-            totalPayment()
         }else if quantity > 1 {
                minusBtn.isEnabled = true
-        quantity += sender.tag
-        quantityLabel.text = "\(quantity)"
-            totalPayment()
         }
+         quantityLabel.text = "\(quantity)"
+        totalPayment()
     }
     
     func totalPayment(){
