@@ -264,7 +264,7 @@
                                         </state>
                                         <connections>
                                             <action selector="removeBtnTapped:" destination="iv2-Dg-Bes" eventType="touchUpInside" id="wdc-9S-MTA"/>
-                                            <segue destination="jvJ-YD-91B" kind="show" identifier="removeSegue" id="jaC-uE-ZPL"/>
+                                            <segue destination="jvJ-YD-91B" kind="show" identifier="removeSegue" id="Nt8-DN-Rk2"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -347,7 +347,7 @@
             </objects>
             <point key="canvasLocation" x="2568.8000000000002" y="132.68365817091455"/>
         </scene>
-        <!--Title-->
+        <!--Empty Cart-->
         <scene sceneID="5gy-Kc-sfY">
             <objects>
                 <viewController id="jvJ-YD-91B" customClass="FinishVC" customModule="Shop_Now__" customModuleProvider="target" sceneMemberID="viewController">
@@ -355,15 +355,18 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="603"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="You have no items in the cart" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WKc-uJ-RgX">
-                                <rect key="frame" x="16" y="70" width="343" height="33"/>
-                                <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="24"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="You have no items in the cart" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WKc-uJ-RgX">
+                                <rect key="frame" x="16" y="45" width="343" height="57.5"/>
+                                <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="21"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2Ns-Ke-ztV">
-                                <rect key="frame" x="16" y="383" width="343" height="71"/>
+                                <rect key="frame" x="16" y="458" width="343" height="45"/>
                                 <color key="backgroundColor" red="0.54283915140000005" green="0.64139658470000005" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="45" id="fgK-Jy-ZfY"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" name="MarkerFelt-Thin" family="Marker Felt" pointSize="30"/>
                                 <state key="normal" title="Continue Shopping">
                                     <color key="titleColor" red="0.95294117649999999" green="0.95294117649999999" blue="0.95294117649999999" alpha="1" colorSpace="calibratedRGB"/>
@@ -372,30 +375,29 @@
                                     <action selector="continueShoppingBtnTapped:" destination="jvJ-YD-91B" eventType="touchUpInside" id="d6s-ke-V9Y"/>
                                 </connections>
                             </button>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="cart" translatesAutoresizingMaskIntoConstraints="NO" id="wir-9J-j2P">
-                                <rect key="frame" x="40" y="153" width="295" height="170"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="cart" translatesAutoresizingMaskIntoConstraints="NO" id="wir-9J-j2P">
+                                <rect key="frame" x="40" y="137.5" width="295" height="211"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="295" id="WH9-Xe-dPq"/>
-                                    <constraint firstAttribute="height" constant="170" id="dON-QA-c71"/>
+                                    <constraint firstAttribute="height" constant="211" id="xhE-xJ-fNN"/>
                                 </constraints>
                             </imageView>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="backgroundColor" red="0.95294117649999999" green="0.95294117649999999" blue="0.95294117649999999" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
-                            <constraint firstItem="WKc-uJ-RgX" firstAttribute="top" secondItem="JJR-p1-Gcf" secondAttribute="top" constant="70" id="2z6-b5-DxV"/>
                             <constraint firstItem="JJR-p1-Gcf" firstAttribute="trailing" secondItem="wir-9J-j2P" secondAttribute="trailing" constant="40" id="30L-JG-sMi"/>
-                            <constraint firstItem="2Ns-Ke-ztV" firstAttribute="top" secondItem="wir-9J-j2P" secondAttribute="bottom" constant="60" id="Cog-zp-VMs"/>
-                            <constraint firstItem="wir-9J-j2P" firstAttribute="top" secondItem="WKc-uJ-RgX" secondAttribute="bottom" constant="50" id="G0D-wN-nNe"/>
+                            <constraint firstItem="2Ns-Ke-ztV" firstAttribute="top" secondItem="wir-9J-j2P" secondAttribute="bottom" constant="109.5" id="Gwd-tb-bof"/>
                             <constraint firstItem="JJR-p1-Gcf" firstAttribute="trailing" secondItem="2Ns-Ke-ztV" secondAttribute="trailing" constant="16" id="I7n-ai-sD9"/>
+                            <constraint firstItem="JJR-p1-Gcf" firstAttribute="bottom" secondItem="2Ns-Ke-ztV" secondAttribute="bottom" constant="100" id="IWZ-12-SPU"/>
                             <constraint firstItem="wir-9J-j2P" firstAttribute="leading" secondItem="JJR-p1-Gcf" secondAttribute="leading" constant="40" id="PcY-nR-cZe"/>
                             <constraint firstItem="WKc-uJ-RgX" firstAttribute="leading" secondItem="JJR-p1-Gcf" secondAttribute="leading" constant="16" id="Rfm-ew-RPY"/>
                             <constraint firstItem="2Ns-Ke-ztV" firstAttribute="leading" secondItem="JJR-p1-Gcf" secondAttribute="leading" constant="16" id="SVX-ok-yOw"/>
                             <constraint firstItem="JJR-p1-Gcf" firstAttribute="trailing" secondItem="WKc-uJ-RgX" secondAttribute="trailing" constant="16" id="hA5-Pm-x9E"/>
-                            <constraint firstItem="JJR-p1-Gcf" firstAttribute="bottom" secondItem="2Ns-Ke-ztV" secondAttribute="bottom" constant="149" id="lDA-kJ-c28"/>
+                            <constraint firstItem="WKc-uJ-RgX" firstAttribute="top" secondItem="JJR-p1-Gcf" secondAttribute="top" constant="45" id="jxr-iy-HoV"/>
+                            <constraint firstItem="wir-9J-j2P" firstAttribute="top" secondItem="WKc-uJ-RgX" secondAttribute="bottom" constant="35" id="sh5-E8-Rsk"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="JJR-p1-Gcf"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Title" id="MPf-32-p0i"/>
+                    <navigationItem key="navigationItem" title="Empty Cart" id="MPf-32-p0i"/>
                     <connections>
                         <outlet property="finishImage" destination="wir-9J-j2P" id="bBf-fG-CTW"/>
                         <outlet property="messageLabel" destination="WKc-uJ-RgX" id="qQS-PS-s9S"/>
@@ -437,6 +439,6 @@
         <image name="shirt01" width="166" height="166"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="jaC-uE-ZPL"/>
+        <segue reference="Nt8-DN-Rk2"/>
     </inferredMetricsTieBreakers>
 </document>
